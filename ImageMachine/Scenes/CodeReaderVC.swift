@@ -17,7 +17,8 @@ class CodeReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Code Reader"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
         
