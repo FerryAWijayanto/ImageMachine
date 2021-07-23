@@ -50,11 +50,10 @@ class MachineDetailVC: UIViewController {
     var item: MachineItem!
     var store: MachineStore!
     var images: [Data] = []
-    var delegate: MachineDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.images = self.item.images ?? []
         setupNavigation()
         setupViews()
         setupDatePicker()
@@ -134,6 +133,7 @@ class MachineDetailVC: UIViewController {
         let machineItem = MachineItem(id: item.id, name: name, type: type, qrNumber: item.qrNumber, maintenanceDate: date, images: images)
         
         store.update(machineItem)
+        MachineUtility.save(store.items)
         presentOAlertOnMainThread(title: "Success", message: "Succesfully save machine data", buttonTitle: "OK")
     }
 }

@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol MachineDataDelegate {
-    func didSave(image assets: [Data])
-}
-
 class MachineDataVC: UIViewController {
     
     var tableView = UITableView()
@@ -68,15 +64,6 @@ class MachineDataVC: UIViewController {
         children: menuActions)
       
       return addNewMenu
-    }
-}
-
-extension MachineDataVC: MachineDataDelegate {
-    func didSave(image assets: [Data]) {
-        store.items.forEach { item in
-            let machineItem = MachineItem(id: item.id, name: item.name, type: item.type, qrNumber: item.qrNumber, maintenanceDate: String(item.qrNumber), images: assets)
-            store.items.append(machineItem)
-        }
     }
 }
 
