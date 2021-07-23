@@ -99,14 +99,12 @@ class MachineDetailVC: UIViewController {
             
         } finish: { (assets) in
             self.images = self.getImage(from: assets)
-            self.delegate?.didSave(image: self.getImage(from: assets))
             self.photoCollectionView.reloadData()
         }
     }
     
     private func getImage(from assets: [PHAsset]) -> [Data] {
         let images = assets.map { fetchImage(from: $0) }
-        print("Pick image:", images)
         return images
     }
     
@@ -133,7 +131,6 @@ class MachineDetailVC: UIViewController {
         let machineItem = MachineItem(id: item.id, name: name, type: type, qrNumber: item.qrNumber, maintenanceDate: date, images: images)
         
         store.update(machineItem)
-        MachineUtility.save(store.items)
         presentOAlertOnMainThread(title: "Success", message: "Succesfully save machine data", buttonTitle: "OK")
     }
 }

@@ -10,15 +10,16 @@ import UIKit
 class MachineDataVC: UIViewController {
     
     var tableView = UITableView()
-    var store = MachineStore()
+    var store: MachineStore! {
+        didSet {
+            store.items = MachineUtility.fetch() ?? [MachineItem]()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
         setupTableView()
-        
-        let item = MachineItem(name: "Mac", type: "Laptop")
-        store.add(item, at: 0)
     }
     
     @objc private func addItems() {
