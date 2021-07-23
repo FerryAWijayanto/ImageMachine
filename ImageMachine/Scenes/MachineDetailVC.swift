@@ -50,6 +50,7 @@ class MachineDetailVC: UIViewController {
     var item: MachineItem!
     var store: MachineStore!
     var images: [Data] = []
+    var delegate: MachineDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +100,7 @@ class MachineDetailVC: UIViewController {
             
         } finish: { (assets) in
             self.images = self.getImage(from: assets)
+            self.delegate?.didSave(image: self.getImage(from: assets))
             self.photoCollectionView.reloadData()
         }
     }
@@ -143,8 +145,8 @@ extension MachineDetailVC: UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MachineDetailCell.cellID, for: indexPath) as! MachineDetailCell
+        
         let image = images[indexPath.row]
-
         cell.set(imageData: image)
         
         return cell
