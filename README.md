@@ -2,10 +2,6 @@
 
 Image Machine is an app that can group image and manage them efficiently from your photo gallery.
 
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
-
 ## Features
 
 - The app have two menu "Machine Data" and "Code Reader", in "Machine Data" you can add new machine by name and type into a new list and you can sort the list alphabet or sort by type.
