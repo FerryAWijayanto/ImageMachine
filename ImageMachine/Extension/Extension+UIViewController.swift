@@ -14,4 +14,11 @@ extension UIViewController {
         alert.modalTransitionStyle      = .crossDissolve
         self.present(alert, animated: true)
     }
+    
+    func presentImageOnMainThread(image: UIImage) {
+        let alert                       = PSAlertImageVC(image: image)
+        alert.modalPresentationStyle    = .overFullScreen
+        alert.modalTransitionStyle      = .crossDissolve
+        self.present(alert, animated: true)
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F002A6F26ABA038007AC561 /* PSAlertImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F002A6E26ABA038007AC561 /* PSAlertImageVC.swift */; };
 		2F442B4B26A91C5F00EA6C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F442B4A26A91C5F00EA6C42 /* AppDelegate.swift */; };
 		2F442B4D26A91C5F00EA6C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F442B4C26A91C5F00EA6C42 /* SceneDelegate.swift */; };
 		2F442B5426A91C6000EA6C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F442B5326A91C6000EA6C42 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F002A6E26ABA038007AC561 /* PSAlertImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSAlertImageVC.swift; sourceTree = "<group>"; };
 		2F442B4726A91C5F00EA6C42 /* ImageMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F442B4A26A91C5F00EA6C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F442B4C26A91C5F00EA6C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				2FBE793F26AA072900AB4323 /* PSAlertVC.swift */,
 				2FD993C626AA9F2D0082CE6E /* PSAlertViewController.swift */,
+				2F002A6E26ABA038007AC561 /* PSAlertImageVC.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				2FBE792826A9779F00AB4323 /* PSTextField.swift in Sources */,
 				2F442B4B26A91C5F00EA6C42 /* AppDelegate.swift in Sources */,
 				2FBE791926A9278100AB4323 /* MachineItem.swift in Sources */,
+				2F002A6F26ABA038007AC561 /* PSAlertImageVC.swift in Sources */,
 				2FD993C726AA9F2D0082CE6E /* PSAlertViewController.swift in Sources */,
 				2FBE792F26A97BE300AB4323 /* PSBodyLabel.swift in Sources */,
 				2F442B6E26A91D5700EA6C42 /* MainTabBarController.swift in Sources */,

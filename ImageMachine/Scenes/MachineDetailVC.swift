@@ -151,7 +151,7 @@ extension MachineDetailVC: UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let image = images[indexPath.row]
-        
+        presentImageOnMainThread(image: UIImage(data: image)!)
         print(image)
     }
     

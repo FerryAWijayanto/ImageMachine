@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = MainTabBarController(store: store)
+//        window?.rootViewController = UINavigationController(rootViewController: PSAlertImageVC())
         window?.makeKeyAndVisible()
     }
 
